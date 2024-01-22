@@ -13,12 +13,15 @@ public class BluetoothManager : MonoBehaviour
     private TextMeshProUGUI _statuText;
     private TextMeshProUGUI _statuTextConnection;
     
-    Vector2 position = new Vector2(0, 100);
+    Vector2 position = new(0, 100);
 
 
     // Start is called before the first frame update
     void Start()
     {
+
+        QualitySettings.vSyncCount = 0;
+        Application.targetFrameRate = 60;
 
 #if UNITY_2020_2_OR_NEWER
 #if UNITY_ANDROID
